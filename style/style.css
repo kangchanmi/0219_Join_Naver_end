@@ -1,0 +1,359 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@800&display=swap');
+
+/*Reset 시작*/
+* {
+    color: #000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {text-decoration: none;}
+a:active {color: #000;}
+a:link {color: #000;}
+a:visited {color: #000;}
+a:hover {color: #000;}
+
+
+ul {list-style: none;}
+/*Reset 끝*/
+
+/*body 배경색 설정 시작*/
+body {
+    background-color: #f5f6f7;
+}
+/*body 배경색 설정 끝*/
+
+
+/*GuideLine 시작*/
+/*div#wrap {border: 1px solid #000;}*/
+/*header#header {border: 1px solid #000;}*/
+/*GuideLine 끝*/
+
+/*div#wrap 시작*/
+div#wrap {
+    width: 482px;
+    padding: 10px;
+    margin: 0 auto;
+}
+/*div#wrap 끝*/
+
+/*로고 영역 시작*/
+header#header {
+    height: 100px;
+
+}
+h1#headerLogo {
+    color: #03c75a;
+    font-size: 46px;
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    line-height: 100px;        /*header#header에서 높이를 100px로 잡았기 때문에 높이를 100px로 지정*/
+                                        /*한 줄 기준*/
+}
+/*로고 영역 끝*/
+
+
+
+
+
+
+
+
+
+/*정보입력 div 크기 지정 시작*/
+
+div.basicInput {
+    text-align: center;
+    margin-bottom: 16px;
+}
+div.basicInput h4 {
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+div.basicInput>span {
+    width: 460px;
+    padding: 16px 10px;
+    border: 1px solid #cacaca;
+    background-color: #fff;
+
+    display: inline-block;
+}
+    /*아이디 입력 시작*/
+#wrap span#memIDArea::after {
+    content: "@naver.com";
+    color: #8c8c8c;
+}
+#wrap div#memID input {
+    width: 77%;
+    border: none;
+    outline: none;
+}
+    /*아이디 입력 끝*/
+
+    /*비밀번호 입력 시작*/
+#wrap span#memPWArea::after {
+    content: "";
+    width: 18px;
+    height: 20px;
+    background-image: url(../images/pw_01.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+    position: relative;
+    top: 4px;
+    cursor: pointer;        /*마우스 가져다 댔을 때 손가락 아이콘*/
+    display: inline-block;
+}
+#wrap div span#memPWArea {
+    padding-top: 11px;
+}
+#wrap div#memPW input {
+    width: 94%;
+    border: none;
+    outline: none;
+}
+
+#wrap span#memPWArea:focus-within {    /*비밀번호 입력 전체 영역*/
+    border: 1px solid #03c75a;
+}
+    /*비밀번호 입력 끝*/
+
+    /*이름 입력 시작*/
+#wrap span#memNameArea:focus-within {    /*비밀번호 입력 전체 영역*/
+    border: 1px solid #03c75a;
+}
+#wrap div#memName input {
+    width: 99%;
+    border: none;
+    outline: none;
+}
+    /*이름 입력 끝*/
+
+    /*생년월일 입력 시작*/
+div.basicBirthInput {
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+
+div.basicBirthInput>span {
+    width: 145px;
+    padding: 16px 10px;
+    border: 1px solid #cacaca;
+    background-color: #fff;
+
+    display: inline-block;
+}
+div.basicBirthInput>span:nth-child(2) {
+    margin-right: 5px;
+}
+div.basicBirthInput>span:nth-child(3) {
+    margin-right: 5px;
+}
+#wrap span.basicBirthInput:focus-within {    /*비밀번호 입력 전체 영역*/
+    border: 1px solid #03c75a;
+}
+#wrap div#memBirth input {
+    width: 99%;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+#wrap div#memBirth select {
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    outline: none;
+
+    -webkit-appearance: none;
+    /*크롬브라우저에서 select 펼침 아이콘 제거*/
+
+    background-image:url("../images/downArrow_01.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+#wrap div#memBirth select::-ms-expand {
+   display: none;
+    /*IE브라우저에서 select 펼침아이콘 제거*/
+            }
+#wrap div#memBirth option {
+    font-size: 16px;
+}
+    /*생년월일 입력 끝*/
+
+    /*휴대전화 입력 시작*/
+#wrap #memPhone {
+    margin-bottom: 20px;
+}
+#wrap #memPhone h4 {
+    margin-bottom: 7px;
+}
+#wrap #memPhone span#nationalNo {
+    width: 453px;
+    padding: 16px 10px;
+    border: 1px solid #cacaca;
+    background-color: #fff;
+    margin-left: 3px;
+    margin-right: 0;
+
+    display: inline-block;
+}
+#wrap div#memPhone span:focus-within {
+    border: 1px solid #03c75a;
+}
+#wrap #memPhone #nationalNo select {
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    outline: none;
+
+    -webkit-appearance: none;
+    /*크롬브라우저에서 select 펼침 아이콘 제거*/
+
+    background-image:url("../images/downArrow_01.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+#wrap #memPhone #nationalNo:focus-within {
+    border: 1px solid #03c75a;
+}
+
+#wrap #memPhone span#memPhoneArea {
+    width: 330px;
+    padding: 16px 10px;
+    border: 1px solid #cacaca;
+    background-color: #fff;
+
+    display: inline-block;
+}
+#wrap #memPhone span#memPhoneArea:focus-within {
+    border: 1px solid #03c75a;
+}
+#wrap #memPhone span#memPhoneArea input {
+    width: 99%;
+    font-size: 15px;
+
+    border: none;
+    outline: none;
+}
+#wrap #memPhone span#authNoBtn {
+    border: 1px solid #03c75a;
+    display: inline-block;
+    margin-left: 3px;
+}
+#wrap #memPhone span#authNoBtn>a {
+    width: 110px;
+    height: 52px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 52px;
+    background-color: #03c75a;
+    display: inline-block;
+}
+#wrap #memPhone span#insAuthNo {
+     width: 451px;
+    padding: 16px 10px;
+    border: 1px solid #cacaca;
+    background-color: #f5f6f7;
+
+    display: inline-block;
+}
+#wrap #memPhone span#insAuthNo input {
+    width: 100%;
+    font-size: 15px;
+
+    border: none;
+    outline: none;
+}
+#wrap #memPhone span {
+    margin-bottom: 10px;
+}
+#wrap #memPhone #memPhoneArea {
+    margin-left: 4px;
+}
+#wrap #memPhone #insAuthNo {
+    margin-left: 4px;
+}
+    /*휴대전화 입력 끝*/
+
+    /*가입하기 버튼 시작*/
+#wrap #submitArea {
+    margin-bottom: 40px;
+}
+#wrap #submitArea span#joinBtn {
+    width: 452px;
+    padding: 0;
+}
+#wrap #submitArea span#joinBtn>a {
+    width: 452px;
+    height: 54px;
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    line-height: 54px;
+    background-color: #03c75a;
+}
+    /*가입하기 버튼 끝*/
+
+/*정보입력 div 크기 지정 끝*/
+
+/*footer#footer 시작*/
+nav#footerLNB {
+    width: 446px;
+/*    border: 1px solid #000;*/
+    margin: 0 auto;
+}
+nav#footerLNB>ul>li {
+    float: left;
+    margin-bottom: 5px;
+}
+nav#footerLNB>ul>li:not(:last-child)::after {
+    content: "|";
+    color: #c9cbcc;
+    width: 20px;
+    font-size: 10px;
+    text-align: center;
+    position: relative;
+    top: -2px;
+    display: inline-block;
+}
+nav#footerLNB>ul>li>a {
+    color: #656565;
+    font-size: 12px;
+}
+/*푸터 버튼 hover 시작*/
+nav#footerLNB>ul>li>a:hover {
+    color: #057a2b;
+    text-decoration: underline;
+}
+nav#footerLNB>ul>li.defaulSelect>a:hover {
+    color: #057a2b;
+}
+#footer>div#copyright span:hover {
+    color: #057a2b;
+    text-decoration: underline;
+}
+/*푸터 버튼 hover 끝*/
+
+nav#footerLNB>ul>li.defaulSelect>a {
+    color: #535353;
+    font-size: 13px;
+    font-weight: bold;
+}
+#footer>div#copyright {
+    color: #4c4c4c;
+    font-size: 12px;
+    text-align: center;
+
+    clear: both;
+}
+
+/*footer#footer 끝*/
+
+
+
+
